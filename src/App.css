@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Kanit:wght@500&family=Nanum+Gothic+Coding&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@600;700&display=swap');
+
+
 .App {
+  /* font-family: 'Titan one'; */
+  font-family: 'Kanit';
+  font-size: xx-large;
   text-align: center;
+  border: 2px solid ;
+  background-color: #063437;
+  color: #fafde5;
 }
 
 .App-logo {
@@ -11,6 +21,16 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.HomePage{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* background-color: #BFDBEE; */
+  /* background-color: #DFEDF6; */
+  background-color: #b8c8d9;
+  color: #17052c ;
 }
 
 .App-header {

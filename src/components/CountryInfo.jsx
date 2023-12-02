@@ -6,17 +6,15 @@ const CountryInfo = (props) => {
 
     // console.log(country.name.common)
     return (
-        <li>
+        <li key= {index}>
            <img src={country.flags.png} alt={country.flags.alt}
            onClick={()=>{setFlagClicked(!flagClicked)}}/>
             {
             flagClicked &&
             <div>
-                <p>{country.name.common}</p>
-                {country.capital.map((capital)=>{
-                    return <p>{capital}</p>
-                })}
-                <p>{country.population}</p>
+                <p>{country.name && country.name.common}</p>
+                {country.capital && country.capital.map((capital, index) => <p key={index}>{capital}</p> )}
+                <p>{country.population && country.population}</p>
             </div>
             }
         </li>
