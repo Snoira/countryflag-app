@@ -9,19 +9,18 @@ const ChooseCountry = (props) => {
         const fetchData = async () => {
             const response = await fetch(props.continent)
             const data = await response.json()
-            // console.log(data)
+            console.log(data)
             setCountries(data)
         }
         fetchData();
     }, [])
 
     return (
-        <div>
-            <h1>Try your knowledge of flags!</h1>
+        <div className='flagContainer'>
             {
             countries.map((country, index) => {
                 return(
-                    <div key={index}>
+                    <div key={index} className='flags'>
                       <CountryInfo country={country} index={index} />  
                     </div>
                 )
