@@ -1,6 +1,5 @@
 import {useState} from "react"
 import {Link} from "react-router-dom"
-import ChooseCountry from "./ChooseCountry"
 
 const ChooseContinent = () => {
 
@@ -24,20 +23,13 @@ const [buttonClicked, setButtonClicked] = useState(false)
             }}
             >
                 Select Continent
-                {/* {buttonClicked ? "Hide Countries" : "Show Countries"} */}
             </button>
             {
                 buttonClicked && 
-                <>
-                <br />
-                <br />
-                <br />
-                <Link to="/flashcards/" state={selectedContinent}>Study with flash cards</Link>
-                <br />
-                <Link to="/test/" state={selectedContinent}>Test your knowledge</Link>
-                <br />
-                </>
-                // <ChooseCountry continent={selectedContinent} />
+                <div className="linkContainer">
+                <Link to="/flashcards/" state={selectedContinent}><h3>Study with flash cards</h3></Link>
+                <Link to="/test/" state={selectedContinent}><h3>Test your knowledge</h3></Link>
+                </div>
             }
         </div>
 

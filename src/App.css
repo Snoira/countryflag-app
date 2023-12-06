@@ -9,29 +9,29 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* font-size: calc(10px + 2vmin); */
   background-color: #b8c8d9;
-  /* font-family: 'Titan one'; */
   font-family: 'Manrope';
-  /* font-size: xx-large; */
   border: 2px solid ;
+  /* font-size: calc(10px + 2vmin); */
+  /* font-family: 'Titan one'; */
+  /* font-size: xx-large; */
   /* background-color: #063437; */
   /* color: #fafde5; */
 }
 
 .HomePage{
   display: flex;
-  /* flex-direction: column; */
   padding: 7% 5%;
-  /* background-color: #BFDBEE; */
-  /* background-color: #DFEDF6; */
   background-color: #b8c8d9;
   color: #17052c ;
   border: 2px solid #17052c;
+  border-radius: 15px;
+  /* flex-direction: column; */
+  /* background-color: #BFDBEE; */
+  /* background-color: #DFEDF6; */
   /* border-width: 10px;
   border-color: #17052c;
   border-style: double; */
-  border-radius: 15px;
 }
 
 .continent{
@@ -84,33 +84,37 @@
   margin-top: 16px;
 }
 
+.linkContainer{
+  margin-top: 7%;
+}
+
 .flagPage{
+  background-color: #b8c8d9;
+  color: #17052c;
   /* display: flex;
   flex-direction: column;
   justify-content: center; */
-  background-color: #b8c8d9;
-  color: #17052c;
   /* background-color: #17052c; */
   /* color: #b8c8d9; */
 }
 
 .flagPage h1{
-  /* margin-top: 50px; */
   background-color: #b8c8d9;
   color: #17052c;
-  /* background-color: #17052c; */
-  /* color: #b8c8d9; */
   font-weight: 800;
   font-size: 48px;
-  /* border-bottom: 2px solid #b8c8d9; */
   border-radius: 4px;
   margin-top: 10%;
+  /* margin-top: 50px; */
+  /* background-color: #17052c; */
+  /* color: #b8c8d9; */
+  /* border-bottom: 2px solid #b8c8d9; */
 }
 
 .chooseCountryContainer{
-background-color: #b8c8d9;
-  /* background-color: #17052c; */
+  background-color: #b8c8d9;
   width: 100%;
+  /* background-color: #17052c; */
 }
 
 .flagContainer{
@@ -120,8 +124,6 @@ background-color: #b8c8d9;
   align-items: center;
   row-gap: 1rem;
   background-color: #17052c;
-  /* background-color: #17052c; */
-  /* border: 10px double #b8c8d9; */
   border-top: 10px double #b8c8d9;
   border-bottom: 10px double #b8c8d9;
   border-left: 10px double #b8c8d9;
@@ -131,23 +133,58 @@ background-color: #b8c8d9;
   margin: 5% 10rem;
   height: 50vh;
   overflow: auto;
+  /* background-color: #17052c; */
+  /* border: 10px double #b8c8d9; */
 }
 
 .flags{
   max-width: 300px;
   /* box-shadow: 5px 10px #b8c8d914; */
+
 }
 
 .flagImg{
   max-height: 100%;
   max-width: 100%;
-  box-shadow: 5px 5px 2px 5px #b8c8d905;
+  /* box-shadow: 5px 5px 2px 5px #b8c8d905; */
+}
+
+.flagImg .done{
+  border: 5px solid #1ADB5D;
 }
 
 .countryInfo{
   color: #b8c8d9;
   font-size: 20px;
   font-weight: 200;
+}
+
+.flagTestContainer{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  gap: 5px;
+  color: #b8c8d9;
+  font-size: 20px;
+  font-weight: 200;
+  /* border: 1px solid #b8c8d9;
+  border-radius: 4px;
+  padding: 5px 0; */
+}
+
+.inputContainer input{
+  color: #17052c;
+  font-size: 15px;
+}
+
+.inputButton{
+  background-color: transparent;
+  color: #b8c8d9;
+  border: thin solid #b8c8d9;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 3px 64px;
 }
 
 /* width */
@@ -169,7 +206,7 @@ background-color: #b8c8d9;
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: yellow;
+  background: #13A446;
 }
 
 /* .App-header {

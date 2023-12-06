@@ -5,12 +5,12 @@ import Flags from './Flags'
 const ChooseCountry = (props) => {
     const [countries, setCountries] = useState([])
 
-    // console.log(props.fromPage)
+    const { continent, fromPage, countingPoints } = props
+
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(props.continent)
+            const response = await fetch(continent)
             const data = await response.json()
-            console.log(data)
             setCountries(data)
         }
         fetchData();
@@ -20,7 +20,8 @@ const ChooseCountry = (props) => {
         <div className='flagContainer'>
             {
             countries.map((country, index) => {
-                if(props.fromPage == "flashcards"){
+
+                if(fromPage == "flashcards"){
                     return(
                     <div key={index} className='flags'>
                         <CountryInfo country={country} index={index} />  
@@ -29,10 +30,11 @@ const ChooseCountry = (props) => {
                 } else{
                     return(
                         <div key={index} className='flags'>
-                          <Flags country={country} index={index} />  
+                          <Flags country={country} index={index} countingPoints={countingPoints} />  
                         </div>
                     )
                 }
+
             })
         }
         </div>
