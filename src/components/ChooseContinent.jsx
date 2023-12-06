@@ -32,7 +32,9 @@ const [buttonClicked, setButtonClicked] = useState(false)
                 <br />
                 <br />
                 <br />
-                <Link to="/Flags/" state={selectedContinent}>Show flags</Link>
+                <Link to="/flashcards/" state={selectedContinent}>Study with flash cards</Link>
+                <br />
+                <Link to="/test/" state={selectedContinent}>Test your knowledge</Link>
                 <br />
                 </>
                 // <ChooseCountry continent={selectedContinent} />
