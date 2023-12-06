@@ -3,19 +3,26 @@
 
 
 .App {
-  /* font-family: 'Titan one'; */
-  font-family: 'Kanit';
-  font-size: xx-large;
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* font-size: calc(10px + 2vmin); */
+  background-color: #b8c8d9;
+  /* font-family: 'Titan one'; */
+  font-family: 'Prompt';
+  /* font-size: xx-large; */
   border: 2px solid ;
-  background-color: #063437;
-  color: #fafde5;
+  /* background-color: #063437; */
+  /* color: #fafde5; */
 }
-
+/* 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -25,15 +32,67 @@
 
 .HomePage{
   display: flex;
-  flex-direction: column;
-  height: 100vh;
+  /* flex-direction: column; */
+  padding: 7% 5%;
   /* background-color: #BFDBEE; */
   /* background-color: #DFEDF6; */
   background-color: #b8c8d9;
   color: #17052c ;
+  border: 2px solid #17052c;
+  border-radius: 15px;
 }
 
-.App-header {
+.continent{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: space-between;
+}
+
+.continentH1{
+  background-color: #17052c;
+  color: #b8c8d9;
+  font-weight: 800;
+  font-size: 48px;
+  border-bottom: 2px solid #17052c;
+  border-radius: 4px;
+  padding: 32px 64px;
+  margin: 10% 0;
+}
+
+.continentSelect{
+  background-color: transparent;
+  color: #17052c;
+  border: 2px solid #17052c;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 16px 64px;
+  /* margin: 0 0 10% 0; */
+}
+
+.continentSelect option{
+  background-color: #17052c;
+  color:#b8c8d9;
+}
+
+.continentSelect option:hover{
+  background-color: #b8c8d9;
+  color: #17052c;
+}
+
+.continentBtn{
+  background-color: #17052c;
+  color: #b8c8d9;
+  border: thin solid;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 16px 64px;
+  margin-top: 16px;
+}
+
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -42,7 +101,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;

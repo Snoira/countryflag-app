@@ -1,6 +1,5 @@
 import { useEffect, useState, useParams } from 'react'
-// import CountryInfo from "./CountryInfo"
-import { Link } from 'react-router-dom'
+import CountryInfo from "./CountryInfo"
 
 const ChooseCountry = (props) => {
     const [countries, setCountries] = useState([])
@@ -18,20 +17,16 @@ const ChooseCountry = (props) => {
 
     return (
         <div>
-            <Link to={"/Flags/"} state={countries} >
-                <button onClick={()=>{console.log(countries)}}>testlänk?</button>
-            </Link>
-
-            {/* {
+            <h1>Try your knowledge of flags!</h1>
+            {
             countries.map((country, index) => {
                 return(
-                    // <CountryInfo key={index} country={country} index={index} />
-                    <Link to={"/Flags/" + country.name.common} state={country} key={index} >
-                        <p>testlänk?</p>
-                    </Link>
+                    <div key={index}>
+                      <CountryInfo country={country} index={index} />  
+                    </div>
                 )
             })
-        } */}
+        }
         </div>
     )
 }
