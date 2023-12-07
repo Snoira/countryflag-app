@@ -27,12 +27,11 @@ const [buttonClicked, setButtonClicked] = useState(false)
             {
                 buttonClicked && 
                 <div className="linkContainer">
-                <Link to="/flashcards/" state={selectedContinent}><h3>Study with flash cards</h3></Link>
-                <Link to="/test/" state={selectedContinent}><h3>Test your knowledge</h3></Link>
+                <Link to="/flashcards/" state={selectedContinent}><h4>Study with flash cards</h4></Link>
+                <Link to="/test/" state={selectedContinent}><h4>Test your knowledge</h4></Link>
                 </div>
             }
         </div>
-
     )
 }
 

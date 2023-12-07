@@ -34,7 +34,6 @@ const ChooseCountry = (props) => {
                         </div>
                     )
                 }
-
             })
         }
         </div>

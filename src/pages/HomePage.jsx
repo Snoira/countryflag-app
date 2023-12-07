@@ -3,8 +3,6 @@ import ChooseContinent from '../components/ChooseContinent';
 
 const HomePage = () => {
 
-
-
     return (
         <div className="HomePage">
             <ChooseContinent />
