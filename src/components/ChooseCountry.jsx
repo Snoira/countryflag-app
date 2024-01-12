@@ -9,9 +9,11 @@ const ChooseCountry = (props) => {
 
     useEffect(() => {
         const fetchData = async () => {
+            console.log(continent)
             const response = await fetch(continent)
             const data = await response.json()
             setCountries(data)
+            console.log(data)
         }
         fetchData();
     }, [])

@@ -20,8 +20,8 @@ const Flags = (props) => {
                     </div>
                     <button className='inputButton'
                         onClick={() => {
-                            let answer = document.querySelector("#answerInput").value;
-                            if (answer === country.name.common) {
+                            let answer = document.querySelector("#answerInput").value.toLowerCase();
+                            if (answer === country.name.common.toLowerCase()) {
                                 countingPoints(1);
                                 setRightAnswer(true)
                                 setFlagClicked(!flagClicked)
