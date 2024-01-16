@@ -1,25 +1,31 @@
-import {useState} from 'react'
+import { useState } from 'react'
+import { Link } from "react-router-dom";
+import style from './CountryInfoStyle.module.css'
 
-const CountryInfo = (props) => {
-    const {country, index} = props
+const CountryCard = ({ country }) => {
     const [flagClicked, setFlagClicked] = useState(false)
 
-    // console.log(country.name.common)
     return (
-        <li key= {index}>
-           <img src={country.flags.png} alt={country.flags.alt}
-           onClick={()=>{setFlagClicked(!flagClicked)}}/>
+        <div className={flagClicked ? style.modal : style.cardContainer}>
+            <img src={country.flags.png} alt={country.flags.alt}
+                onClick={() => { setFlagClicked(!flagClicked) }} />
             {
-            flagClicked &&
-            <div>
-                <p>{country.name && country.name.common}</p>
-                {country.capital && country.capital.map((capital, index) => <p key={index}>{capital}</p> )}
-                <p>{country.population && country.population}</p>
-            </div>
+                flagClicked &&
+                <div className={style.infoContainer}>
+                    <p>Country: {country.name ? country.name.common : ""}</p>
+                    {
+                        country.capital ?
+                            country.capital.map((capital, index) =>
+                                <p key={index}>Capital: {capital}</p>
+                            ) : "No capital found"
+                    }
+                    <p>Population: {country.population ? country.population : ""}</p>
+                    <Link className="TestLink" to="/Test">Ready to try your knowledge?</Link>
+                </div>
             }
-        </li>
-        
+        </div>
+
     )
 }
 
-export default CountryInfo
+export default CountryCard

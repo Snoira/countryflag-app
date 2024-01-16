@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Kanit:wght@500&family=Nanum+Gothic+Coding&family=Titan+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&family=Poppins:wght@200;500;800&family=Roboto:wght@300;500;700;900&display=swap');
 
+/* * {
+    font-family: "Manrope";
+} */
 
 .App {
   /* font-family: 'Titan one'; */
@@ -8,6 +12,45 @@
   font-size: xx-large;
   text-align: center;
   border: 2px solid ;
+  background-color: #063437;
+  color: #fafde5;
+}
+
+.TestLink{
+  font-size: medium;
+  color:#fafde5;
+}
+
+.Testmodal{
+  font-family: "Manrope";
+  display: flex;
+  overflow-x: scroll;
+  /* position: fixed; */
+  /* z-index: 1; */
+  /* top: 0; */
+  /* height: 100%; */
+  width: 100%;
+  /* padding-top: 15%; */
+  /* background-color: #063437; */
+}
+
+select {
+  background-color: transparent;
+  color: #fafde5;
+  border: 2px solid #fafde5;
+  border-radius: 4px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 1rem 3rem;
+  margin: 5% 0;
+}
+
+select option {
+  background-color: #fafde5;
+  color: #063437;
+}
+
+select option:hover {
   background-color: #063437;
   color: #fafde5;
 }

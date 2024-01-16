@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&family=Poppins:wght@200;500;800&family=Roboto:wght@300;500;700;900&display=swap');
+
+.cardContainer{
+    position: relative;
+    font-family: "Manrope";
+    padding: 1%;
+}
+
+.modal{
+    font-family: "Manrope";
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 15%;
+    background-color: #063437;
+}
