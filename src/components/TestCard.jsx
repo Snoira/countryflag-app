@@ -9,12 +9,14 @@ const TestCard = ({ country }) => {
     return (
         <div className={style.cardContainer} >
             <img className={style.flag} src={country.flags.png} alt={country.flags.alt}/>
-            <input id="answerInput" type="text"></input>
+            <div>
+                <input id="answerInput" type="text"></input>
             <button onClick={()=> {
                 // let answer = document.getElementById("answerInput").value;
                 console.log(document.getElementById("answerInput").value)
                 console.log(country.name.common)
             }}>ok</button>
+            </div>
         </div>
 
     )

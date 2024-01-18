@@ -7,19 +7,19 @@ const FlashcardPage = () => {
     const {countries}= useAppContext();
 
     return (
-        <div>
+        <div className="Page FlashCardPage">
+            
             <ChooseContinent />
-            <div className="Frame">
+            
                 {countries.length > 0 &&
-                    countries.map((country, index) => {
-
+                <div className="flagContainer">
+                    {countries.map((country, index) => {
                         return (
                             <CountryCard key={index} country={country} />
                         )
-                    })
+                    })}
+                </div>
                 }
-                
-            </div>
         </div>
     )
 }

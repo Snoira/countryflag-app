@@ -6,7 +6,7 @@ function BtnLink({ to, children }){
 
 const HomePage = () => {
     return (
-        <div className="HomePage">
+        <div className="Page HomePage">
             <div className="Frame">
                 <h1 className="titel" >Flag Quiz</h1>
             <div className="BtnContainer">

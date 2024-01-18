@@ -12,22 +12,33 @@
   /* font-family: 'Kanit'; */
   /* font-family: 'Manrope'; */
   font-family: 'Poppins';
-  /* background-color: #063437; */
-  background-color: burlywood;
+  background-color: #063437;
+  /* background-color: burlywood; */
+  display: grid;
+  place-items: center;
+  height: 100dvh;
+
+}
+
+.Page{
+  background-color: #063437;
+  color: #fafde5;
+  /* display: grid;
+  place-items: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100dvh;
+  width: 90%;
+  /* padding: 2%; */
 }
 
 .HomePage{
   /* background-color: #BFDBEE; */
   /* background-color: #DFEDF6; */
   /* background-color: #b8c8d9; */
-  background-color: #063437;
   /* color: #17052c ; */
-  color: #fafde5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100dvh;
   overflow: hidden;
 }
 
@@ -35,6 +46,7 @@
   border: solid 3px #fafde5;
   border-radius: 10px;
   padding: 5%;
+  /* gap: 10px; */
 }
 
 .titel{
@@ -70,6 +82,26 @@
 .BtnLink:hover{
   background-color: #fafde5;
   color: #063437;
+}
+
+/* .FlashCardPage{
+  padding-top: 5%;
+} */
+
+.SelectContinentContainer{
+  margin: 5% 0;
+}
+
+.flagContainer{
+  border: solid 3px #fafde5;
+  border-radius: 10px;
+  padding: 5%;
+  height: 50%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+  overflow-y: scroll;
 }
 
 select {

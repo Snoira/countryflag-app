@@ -2,7 +2,10 @@
 
 .cardContainer{
     position: relative;
-    padding: 1%;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal{
@@ -22,11 +25,22 @@
 /* .modal .flagImg{
     padding-bottom: 15px;
     max-height: 40dvh;
-}
+} */
+
+/* .flagContainer{
+
+} */
 
 .flagImg{
-    width: 60%;
-} */
+    max-width: 100%;
+    height: auto;
+    flex-grow: 1;
+    transition-duration: 0.2s;
+}
+
+.flagImg:hover{
+    scale: 1.05;
+}
 
 .closeBtn{
     position: fixed;
@@ -53,11 +67,13 @@
 
 .TestLink{
     font-size: medium;
-    color:#fafde592;
+    /* color:#fafde592; */
+    color: #fafde5;
   }
 
 .TestLink:hover {
- color: #fafde5;
+ /* color: #fafde5; */
+ color: #BFDBEE;
 }
 
 /* @media only screen and (min-width: 600px) {

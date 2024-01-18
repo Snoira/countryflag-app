@@ -5,7 +5,7 @@ const ChooseContinent = () => {
     const {fetchData} = useAppContext();
 
     return (
-        <>
+        <div className="SelectContinentContainer">
             <h1>Select Continent</h1>
             <select defaultValue="" required 
                 onChange={async (e) => 
@@ -15,7 +15,7 @@ const ChooseContinent = () => {
                 <option value="https://restcountries.com/v3.1/region/asia" >Asia</option>
                 <option value="https://restcountries.com/v3.1/region/europe" >Europe</option>
             </select>
-        </>
+        </div>
     )
 }
 
