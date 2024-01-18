@@ -7,12 +7,9 @@ const CountryCard = ({ country }) => {
 
     return (
         <div className={flagClicked ? style.modal : style.cardContainer}>
-            {/* <div className={style.flagContainer}>
-                
-            </div> */}
             <img className={style.flagImg} src={country.flags.png} alt={country.flags.alt}
                 onClick={() => setFlagClicked(!flagClicked) } />
-            {/* {
+            {
                 flagClicked &&
                 <>
                     <button className={style.closeBtn} onClick={() => setFlagClicked(!flagClicked) } 
@@ -29,7 +26,7 @@ const CountryCard = ({ country }) => {
                     </div>
                     <Link className={style.TestLink} to="/Test">Ready to try your knowledge?</Link>
                 </>
-            } */}
+            }
         </div>
 
     )

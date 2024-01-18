@@ -22,24 +22,17 @@
     background-color: #063437;
 }
 
-/* .modal .flagImg{
-    padding-bottom: 15px;
-    max-height: 40dvh;
-} */
-
-/* .flagContainer{
-
-} */
-
-.flagImg{
+.cardContainer .flagImg{
+    width: 300px;
     max-width: 100%;
     height: auto;
-    flex-grow: 1;
     transition-duration: 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.flagImg:hover{
-    scale: 1.05;
+.cardContainer .flagImg:hover{
+    scale: 1.1;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
 .closeBtn{
@@ -67,13 +60,13 @@
 
 .TestLink{
     font-size: medium;
-    /* color:#fafde592; */
-    color: #fafde5;
+    color:#fafde592;
+    /* color: #fafde5; */
   }
 
 .TestLink:hover {
- /* color: #fafde5; */
- color: #BFDBEE;
+ color: #fafde5;
+ /* color: #BFDBEE; */
 }
 
 /* @media only screen and (min-width: 600px) {
