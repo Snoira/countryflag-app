@@ -2,7 +2,6 @@
 
 .cardContainer{
     position: relative;
-    font-family: "Manrope";
     padding: 1%;
 }
 
@@ -10,9 +9,69 @@
     font-family: "Manrope";
     position: fixed;
     z-index: 1;
-    top: 0;
-    height: 100%;
+    height: 100dvh;
     width: 100%;
-    padding-top: 15%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: #063437;
 }
+
+/* .modal .flagImg{
+    padding-bottom: 15px;
+    max-height: 40dvh;
+}
+
+.flagImg{
+    width: 60%;
+} */
+
+.closeBtn{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    background: transparent;
+    color: #fafde56a;
+    border: none;
+}
+
+.closeBtn:hover{
+ color: #fafde5;
+}
+
+.infoContainer{
+    padding: 15px;
+}
+
+.infoContainer p{
+    padding: 0;
+    margin: 16px 0 ;
+}
+
+.TestLink{
+    font-size: medium;
+    color:#fafde592;
+  }
+
+.TestLink:hover {
+ color: #fafde5;
+}
+
+/* @media only screen and (min-width: 600px) {
+    
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 992px) {
+    
+}
+
+@media only screen and (min-width: 1200px) {
+    
+} */

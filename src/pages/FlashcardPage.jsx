@@ -9,7 +9,7 @@ const FlashcardPage = () => {
     return (
         <div>
             <ChooseContinent />
-            <div className="flagContainer">
+            <div className="Frame">
                 {countries.length > 0 &&
                     countries.map((country, index) => {
 

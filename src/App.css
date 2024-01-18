@@ -1,37 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Kanit:wght@500&family=Nanum+Gothic+Coding&family=Titan+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Kanit:wght@500&family=Nanum+Gothic+Coding&family=Titan+One&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@600;700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&family=Poppins:wght@200;500;800&family=Roboto:wght@300;500;700;900&display=swap');
 
-/* * {
-    font-family: "Manrope";
-} */
+*{
+  margin: 0;
+  padding: 0;
+}
 
 .App {
   /* font-family: 'Titan one'; */
-  font-family: 'Kanit';
-  font-size: xx-large;
-  text-align: center;
-  border: 2px solid ;
-  background-color: #063437;
-  color: #fafde5;
-}
-
-.TestLink{
-  font-size: medium;
-  color:#fafde5;
-}
-
-.Testmodal{
-  font-family: "Manrope";
-  display: flex;
-  overflow-x: scroll;
-  /* position: fixed; */
-  /* z-index: 1; */
-  /* top: 0; */
-  /* height: 100%; */
-  width: 100%;
-  /* padding-top: 15%; */
+  /* font-family: 'Kanit'; */
+  /* font-family: 'Manrope'; */
+  font-family: 'Poppins';
   /* background-color: #063437; */
+  background-color: burlywood;
+}
+
+.HomePage{
+  /* background-color: #BFDBEE; */
+  /* background-color: #DFEDF6; */
+  /* background-color: #b8c8d9; */
+  background-color: #063437;
+  /* color: #17052c ; */
+  color: #fafde5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.Frame{
+  border: solid 3px #fafde5;
+  border-radius: 10px;
+  padding: 5%;
+}
+
+.titel{
+  font-size: 3em;
+  padding-top: 10%;
+}
+
+.BtnContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10% 0;
+}
+
+.BtnLink{
+  /* color: #063437;
+  background: #fafde5; */
+  color: #fafde5;
+  background: transparent;
+  border: solid 2px #fafde5;
+  width: 10rem;
+  padding: 2%;
+  font-family: 'Manrope';
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.BtnLink:hover{
+  background-color: #fafde5;
+  color: #063437;
 }
 
 select {
@@ -43,6 +81,12 @@ select {
   font-weight: 500;
   padding: 1rem 3rem;
   margin: 5% 0;
+  transition-duration: 0.4s;
+}
+
+select:hover{
+  background-color: #fafde5;
+  color: #063437;
 }
 
 select option {
@@ -55,47 +99,3 @@ select option:hover {
   color: #fafde5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.HomePage{
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  /* background-color: #BFDBEE; */
-  /* background-color: #DFEDF6; */
-  background-color: #b8c8d9;
-  color: #17052c ;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
