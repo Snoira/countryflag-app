@@ -23,7 +23,7 @@
 }
 
 .cardContainer .flagImg{
-    width: 300px;
+    width: 250px;
     max-width: 100%;
     height: auto;
     transition-duration: 0.2s;
@@ -43,6 +43,7 @@
     background: transparent;
     color: #fafde56a;
     border: none;
+    transition-duration: 0.2s;
 }
 
 .closeBtn:hover{
@@ -56,12 +57,18 @@
 .infoContainer p{
     padding: 0;
     margin: 16px 0 ;
+    font-size: large;
+}
+
+.boldText{
+    font-weight: bolder;
 }
 
 .TestLink{
     font-size: medium;
     color:#fafde592;
     /* color: #fafde5; */
+    transition-duration: 0.3s;
   }
 
 .TestLink:hover {

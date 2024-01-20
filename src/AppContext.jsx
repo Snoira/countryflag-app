@@ -17,15 +17,26 @@ export function AppProvider({children}){
         setCountries(json)
     }
 
-    const pointCounter = () => {
-        setPoints(points+1)
+    const shuffleArray = () => {
+        const newArray = [...countries];
+        for (let i = newArray.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+        }
+        setCountries(newArray);
+      };
+
+    const pointCounter = (n) => {
+        setPoints(points+n)
     }
 
     const contextValue = {
         countries, 
         setCountries,
+        points,
         fetchData,
         pointCounter,
+        shuffleArray,
     }
 
     return <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>

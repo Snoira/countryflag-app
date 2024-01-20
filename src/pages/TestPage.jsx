@@ -8,17 +8,16 @@ const TestPage = () => {
     const { countries, points } = useAppContext();
 
     return (
-        <>
+        <div className="Page">
             <ChooseContinent />
-            
             {
                 countries.length > 0 &&
                 <>
-                    {/* <h6>Points: {points}/{countries.length} </h6> */}
+                    <h3>Points: {points}/{countries.length} </h3>
                     <SimpleCarousel />
                 </>
             }
-        </>
+        </div>
     )
 }
 

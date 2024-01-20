@@ -15,14 +15,14 @@ const CountryCard = ({ country }) => {
                     <button className={style.closeBtn} onClick={() => setFlagClicked(!flagClicked) } 
                     >X</button>
                     <div className={style.infoContainer}>
-                        <p>Country: {country.name ? country.name.common : ""}</p>
+                        <p><span className={style.boldText}>Country: </span> {country.name ? country.name.common : ""}</p>
                         {
                             country.capital ?
                                 country.capital.map((capital, index) =>
-                                    <p key={index}>Capital: {capital}</p>
+                                    <p key={index}><span className={style.boldText}>Capital: </span> {capital}</p>
                                 ) : "No capital found"
                         }
-                        <p>Population: {country.population ? country.population : ""}</p>
+                        <p><span className={style.boldText}> Population:</span> {country.population ? country.population : ""}</p>
                     </div>
                     <Link className={style.TestLink} to="/Test">Ready to try your knowledge?</Link>
                 </>
