@@ -1,17 +1,17 @@
 import { useState } from "react"
+import { Link } from 'react-router-dom';
 import { useAppContext } from "../AppContext"
 import style from './TestCard.module.css'
 
-const TestCard = ({ country, nextSlide }) => {
-    const { pointCounter } = useAppContext();
+const TestCard = ({ country, nextSlide, index, currentSlide }) => {
+    const { pointCounter, changeToCorrectAnswer, filterFlags } = useAppContext();
     const [showInput, setShowInput] = useState(false);
     const [wrongAnswer, setWrongAnswer] = useState(false)
-    const [completed, setCompleted] = useState(false)
 
     const rightAnswer = () => {
         setShowInput(false)
         setWrongAnswer(false)
-        setCompleted(true)
+        changeToCorrectAnswer(index)
         nextSlide()
     }
 
@@ -26,29 +26,27 @@ const TestCard = ({ country, nextSlide }) => {
     }
 
     return (
-        <div className={completed ? `${style.cardContainer} ${style.completed}` : style.cardContainer} >
+        <div className={country.correctAns ? `${style.cardContainer} ${style.completed}` : style.cardContainer} >
             <img className={showInput ? style.backgroundFlag : style.flag}
                 src={country.flags.png}
                 alt={country.flags.alt}
-                onClick={() => { !completed && setShowInput(!showInput); console.log(country.name.common); setWrongAnswer(false) }} 
-                popovertarget="IC"/>
+                onClick={() => { !country.correctAns && setShowInput(!showInput); console.log(country.name.common); setWrongAnswer(false) }} />
 
-            { !completed && showInput &&
-            
-                <div id="IC" className={`${style.inputContainer} ${wrongAnswer ? style.shakeEffect : ''}`}
-                    style={showInput ? { display: 'flex' } : { display: 'none' }}
-                    popover >
+            {currentSlide === index && showInput ?
+                <div className={`${style.inputContainer} ${wrongAnswer ? style.shakeEffect : ''}`}
+                    style={showInput ? { display: 'flex' } : { display: 'none' }}>
                     <input id="answerInput"
-                        className={style.answerInput}
+                        className={wrongAnswer ? `${style.answerInput} ${style.wrongInput}` : style.answerInput}
                         type="text"
                         pattern="[a-zA-Z]*"
-                        placeholder="Name of country"></input>
+                        placeholder="Name of country"
+                        onClick={() => { setWrongAnswer(false) }}
+                        autoFocus
+                    />
                     <button className={style.answerBtn} onClick={() => { handleAnswer() }}>ok</button>
-                </div>
+                </div> : ''
             }
-
         </div>
-
     )
 }
 

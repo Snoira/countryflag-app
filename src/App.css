@@ -62,6 +62,13 @@
   padding: 10% 0;
 }
 
+.btnContainer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+}
+
 .BtnLink{
   /* color: #063437;
   background: #fafde5; */
@@ -103,7 +110,7 @@ button:hover{
 } */
 
 .SelectContinentContainer{
-  margin: 3% 0;
+  margin: 1% 0;
   color: #fafde5;
 }
 

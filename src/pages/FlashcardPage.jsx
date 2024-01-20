@@ -4,7 +4,7 @@ import ChooseContinent from "../components/ChooseContinent";
 import CountryCard from "../components/CountryInfo";
 
 const FlashcardPage = () => {
-    const { countries, shuffleArray } = useAppContext();
+    const { countries, shuffleArray, sortArr } = useAppContext();
 
     return (
         <div className="Page FlashCardPage">
@@ -13,12 +13,12 @@ const FlashcardPage = () => {
 
             {countries.length > 0 &&
                 <>
-                    {/* <button onClick={()=>{ shuffleArray() }} >Shuffle</button> */}
                     <div className="flagContainer">
                         {countries.map((country, index) => {
-                            return (
-                                <CountryCard key={index} country={country} />
-                            )
+                                return (
+                                    <CountryCard key={index} country={country} />
+                                )
+                            
                         })}
                     </div>
 
@@ -26,7 +26,14 @@ const FlashcardPage = () => {
             }
             <div className="linkBtnContainer">
                 <Link to="/" className="homeLink">back to homepage</Link>
-                {countries.length > 0 && <button onClick={() => { shuffleArray() }} >Shuffle</button>}
+                {countries.length > 0 && 
+                <div className="btnContainer" >
+                    <button onClick={() => { shuffleArray() }} >Shuffle</button>
+                    <button onClick={() => { sortArr("a-z") }} >A-Z</button>
+                    <button onClick={() => { sortArr("z-a") }} >Z-A</button>
+                    <button onClick={() => { sortArr("reverse") }} >Reverse</button>
+                </div>
+                }
             </div>
         </div>
     )

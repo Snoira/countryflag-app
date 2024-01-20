@@ -20,6 +20,7 @@
 }
 
 .flag{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition-duration: 0.5s;
 }
 
@@ -56,10 +57,31 @@ input:invalid{
     /* transition-duration: 0.3s; */
 }
 
+.wrongInput{
+    border-color: red;
+}
+
 .answerBtn{
     height: 2rem;
     width: 2rem;
     cursor: pointer;
+}
+
+.test{
+    width: 400px;
+    height: 400px;
+}
+
+.TestLink{
+    font-size: medium;
+    color:#fafde592;
+    /* color: #fafde5; */
+    transition-duration: 0.3s;
+  }
+
+.TestLink:hover {
+ color: #fafde5;
+ /* color: #BFDBEE; */
 }
 
 .shakeEffect{
