@@ -1,13 +1,16 @@
 // import { useState } from "react"
+import { Link } from "react-router-dom";
 import { useAppContext } from "../AppContext";
+import style from "./ChooseContinentStyle.module.css"
 
 const ChooseContinent = () => {
     const {fetchData} = useAppContext();
 
     return (
-        <div className="SelectContinentContainer">
+        <div className={style.SelectContinentContainer}>
             <h1>Select Continent</h1>
-            <select defaultValue="" required 
+            <select className={style.Select}
+                defaultValue="" required 
                 onChange={async (e) => 
                     { e.target.value && await fetchData(e.target.value) }} >
                 <option hidden value="" >Select a continent</option>
@@ -15,6 +18,7 @@ const ChooseContinent = () => {
                 <option value="https://restcountries.com/v3.1/region/asia" >Asia</option>
                 <option value="https://restcountries.com/v3.1/region/europe" >Europe</option>
             </select>
+            {/* <Link to="/" className={style.homeLink}>back to homepage</Link> */}
         </div>
     )
 }

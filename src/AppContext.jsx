@@ -16,7 +16,6 @@ export function AppProvider({children}){
         const response = await fetch(API);
         const json = await response.json();
         addToObj(json)
-
     }
 
     const addToObj = (array) => {

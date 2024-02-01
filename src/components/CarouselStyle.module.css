@@ -1,3 +1,4 @@
+
 .carouselContainer {
     position: relative;
     width: 100%;
@@ -7,6 +8,7 @@
     border: solid 3px #fafde5;
     border-radius: 10px;
     /* padding: 5%; */
+    box-shadow: 0 0 10px 2px #010808;
   }
   
   .carousel {

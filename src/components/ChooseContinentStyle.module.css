@@ -1,0 +1,51 @@
+.TestPage {
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homeLink {
+  color:#fafde592;
+  transition-duration: 0.2s;
+  /* margin-top: 1%; */
+}
+
+.homeLink:hover{
+  color: #fafde5
+}
+
+
+.SelectContinentContainer{
+    margin: 1% 0;
+    display: grid;
+    width: fit-content;
+    max-width: 95%;
+    margin: auto 0;
+    margin-bottom: 2%;
+    /* text-align: center; */
+  }
+
+  .Select {
+    background-color: transparent;
+    color: #fafde5;
+    border: 2px solid #fafde5;
+    border-radius: 6px;
+    font-size: 1.3rem;
+    padding: 1rem;
+    /* text-align: center; */
+    margin: 5% 0;
+    /* max-width: 100%; */
+    transition-duration: 0.4s;
+    box-shadow: 0 0 3px 1px #010808;
+  }
+
+  Select:hover{
+    background-color: #fafde5;
+    color: #063437;
+  }
+  
+  Select option {
+    background-color: #fafde5;
+    color: #063437;
+  }
