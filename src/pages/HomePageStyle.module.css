@@ -1,0 +1,51 @@
+.Page{
+    background-color: #063437;
+    width: 100dvw;
+}
+
+.Frame{
+    border: solid 3px #fafde5;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    width: 300px;
+    max-width: 90%;
+    margin: auto;
+    min-height: 100%;
+    box-shadow: 0 0 10px 2px #010808;
+}
+
+.Title {
+    font-size: 3rem;
+    margin: 0.67em 0;
+}
+
+.BtnContainer{
+    margin-bottom: 7%;
+}
+
+.BtnContainer> a:-webkit-any-link {
+    text-decoration: none;
+}
+
+.BtnLink{
+    color: #fafde5;
+    background: transparent;
+    text-decoration-line: none;
+    border: solid 2px #fafde5;
+    display: block;
+    width: 10rem;
+    padding: 4% 2%;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    box-shadow: 0 0 3px 1px #010808;
+  }
+  
+  .BtnLink:hover{
+    background-color: #fafde5;
+    color: #063437;
+  }

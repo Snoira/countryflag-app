@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&family=Poppins:wght@200;500;800&family=Roboto:wght@300;500;700;900&display=swap');
+
+.cardContainer{
+    position: relative;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    font-family: "Manrope";
+    position: fixed;
+    z-index: 1;
+    height: 100dvh;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #063437;
+}
+
+.cardContainer .flagImg{
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    transition-duration: 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.cardContainer .flagImg:hover{
+    scale: 1.1;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.closeBtn{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    background: transparent;
+    color: #fafde56a;
+    border: none;
+    transition-duration: 0.2s;
+}
+
+.closeBtn:hover{
+ color: #fafde5;
+}
+
+.infoContainer{
+    padding: 15px;
+}
+
+.infoContainer p{
+    padding: 0;
+    margin: 16px 0 ;
+    font-size: large;
+}
+
+.boldText{
+    font-weight: bolder;
+}
+
+.TestLink{
+    font-size: medium;
+    color:#fafde592;
+    /* color: #fafde5; */
+    transition-duration: 0.3s;
+  }
+
+.TestLink:hover {
+ color: #fafde5;
+ /* color: #BFDBEE; */
+}
+
+/* @media only screen and (min-width: 600px) {
+    
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 992px) {
+    
+}
+
+@media only screen and (min-width: 1200px) {
+    
+} */

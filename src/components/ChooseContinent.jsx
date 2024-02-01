@@ -1,32 +1,25 @@
-import {useState} from "react"
-import ChooseCountry from "./ChooseCountry"
+// import { useState } from "react"
+import { Link } from "react-router-dom";
+import { useAppContext } from "../AppContext";
+import style from "./ChooseContinentStyle.module.css"
 
 const ChooseContinent = () => {
-
-const [selectedContinent, setSelectedContinent] = useState("")
-const [buttonClicked, setButtonClicked] = useState(false)
+    const {fetchData} = useAppContext();
 
     return (
-        <div>
-            <h1>Choose a Continent</h1>
-            <select name="Continents" id="continents">
-                <option value="https://restcountries.com/v3.1/region/africa">Africa</option>
-                <option value="https://restcountries.com/v3.1/region/asia">Asia</option>
-                <option value="https://restcountries.com/v3.1/region/europe">Europe</option>
+        <div className={style.SelectContinentContainer}>
+            <h1>Select Continent</h1>
+            <select className={style.Select}
+                defaultValue="" required 
+                onChange={async (e) => 
+                    { e.target.value && await fetchData(e.target.value) }} >
+                <option hidden value="" >Select a continent</option>
+                <option value="https://restcountries.com/v3.1/region/africa" >Africa</option>
+                <option value="https://restcountries.com/v3.1/region/asia" >Asia</option>
+                <option value="https://restcountries.com/v3.1/region/europe" >Europe</option>
             </select>
-            <button
-            onClick={()=>{
-                const continent = document.querySelector("#continents").value;
-                setSelectedContinent(continent)
-                console.log(buttonClicked)
-                setButtonClicked(!buttonClicked)
-            }}
-            >{buttonClicked ? "Hide Countries" : "Show Countries"}</button>
-            {
-                buttonClicked && <ChooseCountry continent={selectedContinent} />
-            }
+            {/* <Link to="/" className={style.homeLink}>back to homepage</Link> */}
         </div>
-
     )
 }
 
