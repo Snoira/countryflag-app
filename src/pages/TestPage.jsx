@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 import { useAppContext } from "../AppContext";
 import ChooseContinent from "../components/ChooseContinent"
-// import TestCard from "../components/TestCard";
 import SimpleCarousel from "../components/ChooseCountry";
 import style from '../components/ChooseContinentStyle.module.css'
 
 const TestPage = () => {
 
-    const { countries, points, shuffleArray } = useAppContext();
+    const { countries, points } = useAppContext();
 
     return (
         <div className={style.TestPage}>
@@ -15,8 +14,7 @@ const TestPage = () => {
             {
                 countries.length > 0 &&
                 <>
-                    <h1>test</h1>
-                    {/* <h3>Points: {points}</h3> */}
+                    <h3>Points: {points}</h3>
                     <SimpleCarousel />
                 </>
             }
